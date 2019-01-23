@@ -3,7 +3,7 @@ package POO;
 public class Vetement extends Article {
 	private double taille;
 	public Vetement(String NumProduit, String nom, double taille){
-		return 0;
+		//completer
 	}
 	
 	public Vetement(String NumProduit, String nom, double prix, double taille){

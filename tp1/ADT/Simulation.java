@@ -8,6 +8,10 @@ public class Simulation {
 	 //Retourne un nombre réel aléatoire uniformément dans [0,1[
 	    public static double uniform() {
 	        //completer
+	    	//Random r = new Random();
+	    	//double valeur = 0 + r.nextInt(1 - 0);
+	    	double valeur = Math.random();
+	    	return valeur ;
 	    }
 
 	 
@@ -15,6 +19,10 @@ public class Simulation {
 	 //Retourne un nombre entier aléatoire uniformément dans [0,n[
 	    public static int uniform(int n) {
 	        //completer
+	    	//Random r = new Random();
+	    	//int valeur = r.nextInt(n);
+	    	int valeur = (int) Math.random()*n;
+	    	return valeur;
 	    }
 
 	//Retourne un entier long aléatoire uniformément dans [0, n[.

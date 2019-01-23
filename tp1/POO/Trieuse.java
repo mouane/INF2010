@@ -14,6 +14,8 @@ public class Trieuse {
     private static class NomOrdre implements Comparator<Etudiant> {
         public int compare(Etudiant x, Etudiant y) {
            // completer
+        	x.
+        	
         }
     }
 
@@ -66,7 +68,7 @@ public class Trieuse {
                  // Completer
         System.out.println("----------");
 
-       
+        return true
         Etudiant carlos = new Etudiant("1698853","carlos", 3);
         Etudiant Ines = new Etudiant("1897456","Ines", 2);
 
