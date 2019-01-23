@@ -11,6 +11,7 @@ public class Main {
 		e.AjouterNote("INF2610", "Noyau d'un système d'exploitation", 3);
 		System.out.println(e.equals(f));
 		System.out.println(e.toString());
+		System.out.println(f.toString());
 		
 		
  
