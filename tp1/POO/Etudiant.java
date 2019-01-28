@@ -22,7 +22,6 @@ public class Etudiant {
 		 this.prenom = null;
 		 this.section = section;
 		 this.email = null;
-		 this.section =0;
 		 this.n_des_notes = 0;
 		 notes= new NoteCours[N];
 		
@@ -43,6 +42,11 @@ public class Etudiant {
 					
 			this.n_des_notes++;
 		
+	}
+	public void afficherEnsembleDesNotes() {
+		for(int i =0; i<n_des_notes; i++) {
+			System.out.println("Sigle: "+ notes[i].sigle +"   Titre: "+ notes[i].titre +"   Note: "+ notes[i].note);
+		}
 	}
 	
 	public double NoteMoyenne(){
