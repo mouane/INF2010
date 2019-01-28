@@ -10,26 +10,33 @@ public class Compteur implements Comparable<Compteur> {
     
     public Compteur(String id) {
          // completer
+    	nom = id;
     } 
 
    
     public void increment() {
          // completer
+    	compteur++;
     } 
 
    
     public int score() {
          // completer
+    	return compteur;
     } 
 
    
     public String toString() {
          // completer
+    	String s= "Nom:  " + nom + " Score:  "+ score();
+    	return s;
+    	
     } 
 
   
     public int compareTo(Compteur x) {
                  // completer
+    	return Integer.compare(compteur, x.score());
     }
     
 	
