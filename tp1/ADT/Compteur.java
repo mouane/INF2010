@@ -76,5 +76,6 @@ public class Compteur implements Comparable<Compteur> {
         	System.out.println(Compteur[i].toString());
         }
         System.out.println("Score final: "+ somme);
-    } 
-} 
+    }
+}
+

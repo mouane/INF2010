@@ -12,6 +12,7 @@ public class Simulation {
 	    	//double valeur = 0 + r.nextInt(1 - 0);
 	    	double valeur = Math.random();
 	    	return valeur ;
+	    	//return new Random().nextDouble();
 	    }
 
 	 
@@ -23,6 +24,7 @@ public class Simulation {
 	    	//int valeur = r.nextInt(n);
 	    	int valeur = (int) Math.random()*n;
 	    	return valeur;
+	    	//return random.nextInt(n);
 	    }
 
 	//Retourne un entier long aléatoire uniformément dans [0, n[.
@@ -50,10 +52,19 @@ public class Simulation {
     //Retourne avec succès un booléen true si p suit d'une distribution de Bernoulli
     public static boolean bernoulli(double p) {
        //completer
+    	return (p>= 0 && p<=1);
+    	
+    	//if(p<uniform(n))
+    	
     }
     
     public static Compteur max(Compteur x, Compteur y) {
       // completer
+    	if(x.score()>y.score()) {
+    		return x;
+    	}
+    		return y;
+    	
     }
 	
 	 public static void main(String[] args) {
@@ -66,7 +77,7 @@ public class Simulation {
               //afficher la différence entre les score des compteur
 	        
 	        Compteur pile_c = new Compteur("pile");
-		Compteur pile_c = new Compteur("face");
+	        Compteur face_c = new Compteur("face");
 		        
 	          //Les instructions du simulation
                    //completer
