@@ -178,7 +178,7 @@ public class Stack<Item> implements Iterable<Item> {
      */
     public static void main(String[] args) {
         Stack<String> stack = new Stack<String>();
-        while (!StdIn.isEmpty()) {
+        /*while (!StdIn.isEmpty()) {
             String item = StdIn.readString();
             if (!item.equals("-"))
                 stack.push(item);
@@ -186,5 +186,18 @@ public class Stack<Item> implements Iterable<Item> {
                 StdOut.print(stack.pop() + " ");
         }
         StdOut.println("(" + stack.size() + " left on stack)");
+        */
+        if (stack.isEmpty()) {
+            System.out.print("le sac est vide" + System.lineSeparator());
+        }
+        stack.push(32);
+        System.out.print("nombre d'elements " + stack.n + System.lineSeparator());
+        stack.push(45);
+        stack.push(409);
+        stack.push(4555);
+        stack.push(4509);
+        for (Integer stacks : stack) {
+            System.out.print(stack + System.lineSeparator());
+        }
     }
 }
