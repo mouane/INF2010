@@ -1,6 +1,7 @@
 package ADT;
 
 import java.util.Random;
+import java.lang.Math;
 
 public class Simulation {
 	 private static Random random;  
@@ -8,6 +9,13 @@ public class Simulation {
 	 //Retourne un nombre réel aléatoire uniformément dans [0,1[
 	    public static double uniform() {
 	        //completer
+	    	//Random r = new Random();
+	    	//double valeur = 0 + r.nextInt(1 - 0);
+	    	//double valeur = Math.random();
+	    	//double valeur = new Random().nextDouble();
+	    	//System.out.println("valeur uniform" + valeur);
+	    	//return valeur ;
+	    	return new Random().nextDouble();
 	    }
 
 	 
@@ -15,6 +23,12 @@ public class Simulation {
 	 //Retourne un nombre entier aléatoire uniformément dans [0,n[
 	    public static int uniform(int n) {
 	        //completer
+	    	//Random r = new Random();
+	    	//int valeur = r.nextInt(n);
+	    	//int valeur = (int) Math.random()*n;
+	    	//System.out.println("valeur uniform  " + valeur);
+	    	//return valeur;
+	    	return random.nextInt(n);
 	    }
 
 	//Retourne un entier long aléatoire uniformément dans [0, n[.
@@ -42,10 +56,21 @@ public class Simulation {
     //Retourne avec succès un booléen true si p suit d'une distribution de Bernoulli
     public static boolean bernoulli(double p) {
        //completer
+    	//return (p>= 0 && p<=1);
+    	return p>=0.5;
+    	//return ( p < uniform());
+    	
+    	//if(p<uniform(n))
+    	
     }
     
     public static Compteur max(Compteur x, Compteur y) {
       // completer
+    	if(x.score()>y.score()) {
+    		return x;
+    	}
+    	return y;
+    	
     }
 	
 	 public static void main(String[] args) {
@@ -56,15 +81,31 @@ public class Simulation {
               //Les instructions du simulation
                    //completer
               //afficher la différence entre les score des compteur
+	        for (int i =0; i<n;i++) {
+	        	double random = uniform();
+	        	if(Simulation.bernoulli(random)) {
+	        		pile.increment();
+	        	}else {
+	        		face.increment();
+	        	}
+	        }
+	        System.out.println("Affichage de la diff�rence entre les score des compteurs " +Math.abs((pile.score()-face.score())));
 	        
 	        Compteur pile_c = new Compteur("pile");
-		Compteur pile_c = new Compteur("face");
+	        Compteur face_c = new Compteur("face");
 		        
 	          //Les instructions du simulation
                    //completer
                    //afficher le maximum entre les score des compteur
-
-
+	        for (int i =0; i<n;i++) {
+	        	double random = uniform();
+	        	if(Simulation.bernoulli(random)) {
+	        		pile.increment();
+	        	}else {
+	        		face.increment();
+	        	}
+	        }
+	        System.out.println("Affichage de maximum entre les scores des compteurs: " +   max(pile,face).score());
 	        }
 	    
 	        
