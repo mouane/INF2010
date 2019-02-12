@@ -94,6 +94,17 @@ public class HashFunctions
       Random generator = new Random( System.nanoTime() );
       ArrayList<Integer> al = new ArrayList<Integer>();
       // Completer
+     
+      int temp, p= 46337; ///Il s'agit du plus grand nombre premier qu'une variable de type integer 
+	   //peut prendre en raison de la memoire maximal allouee a ce type (2^31 - 1)
+      //temp = generator.nextInt(p);
+      for(int i =0; i<length; i++) {
+    	temp = generator.nextInt(p);
+    	  while(al.contains(temp) && temp!=al.lastIndexOf(temp)) {
+    		  temp=generator.nextInt(p); 
+    	  }
+    	  al.add(temp);
+      }
       return al;
    }
 }
