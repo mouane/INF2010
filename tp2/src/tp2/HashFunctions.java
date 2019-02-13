@@ -96,15 +96,19 @@ public class HashFunctions
       // Completer
      
       int temp, p= 46337; ///Il s'agit du plus grand nombre premier qu'une variable de type integer 
-	   //peut prendre en raison de la memoire maximal allouee a ce type (2^31 - 1)
+	  //peut prendre en raison de la memoire maximal allouee a ce type (2^31 - 1)
       //temp = generator.nextInt(p);
-      for(int i =0; i<length; i++) {
-    	temp = generator.nextInt(p);
-    	  while(al.contains(temp) && temp!=al.lastIndexOf(temp)) {
-    		  temp=generator.nextInt(p); 
-    	  }
-    	  al.add(temp);
-      }
+      //for(int i =0; i<length; i++)
+      do{temp = generator.nextInt(p);
+      		if(al.contains(temp)){
+      			temp=generator.nextInt(p); 
+      		}else al.add(temp);
+      	}while(al.size()<length);
+      	
+    	//temp = generator.nextInt(p);
+      //while(al.contains(temp) && temp!=al.lastIndexOf(temp))
+      
+      
       return al;
    }
 }
