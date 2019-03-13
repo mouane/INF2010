@@ -1,3 +1,9 @@
+/*
+ * Paul Clas 1846912 & Mazigh Ouanes 1921035
+ * 12 Mars 2019
+ * TestHelper.java
+ */
+package tp3;
 // Toute modification a ce fichier ne sera pas comptabilisée
 
 public class TestHelper {

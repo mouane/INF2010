@@ -1,3 +1,9 @@
+/*
+ * Paul Clas 1846912 & Mazigh Ouanes 1921035
+ * 12 Mars 2019
+ * TestCompany.java
+ */
+package tp3;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
