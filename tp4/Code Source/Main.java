@@ -77,12 +77,12 @@ public class Main
       /*
        * Ajouter appels pour repondre a la question
        **/
-      System.out.println("/n" + "Test Pool (Retirer la Racine):"); //la racine est 11 ici
-      //test
+      System.out.println("/n" + "Test Pool :");
+      
       heap.poll();
       System.out.println( heap.printFancyTree() + "\n");
       
-      System.out.println("\n" + "Test Offer (Ajout de 11):"); //on la remt 11
+      System.out.println("\n" + "Test Offer :");
       heap.offer(11);
       System.out.println( heap.printFancyTree() + "\n" );
       
@@ -98,12 +98,20 @@ public class Main
        */
       
       System.out.println("Test ConcurrentModificationException:");
-      
+      System.out.println();
+
+      Iterator<Integer> iterateur1 = heap.iterator();
+
+      while (iterateur1.hasNext()) {
+
+    	  heap.offer(10);
+
+    	  iterateur1.next();
+
+      }
       
       System.out.println("Test NoSuchElementException:");
-      heap.clear();
-      Iterator<Integer> iterateur = heap.iterator();
-      iterateur.next();
+   
 
       System.out.println("Test UnsupportedOperationException:");
       
