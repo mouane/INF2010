@@ -378,9 +378,21 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> extends Abs
 	
 	public boolean hasNext() {
 	    //COMPLETEZ
-		return false;
+		//return false;
 		//return position != currentSize;
-	}
+		//boolean answ;
+		/*for(int i = 0; i < currentSize; i++)
+        {
+            if(array[i] != null)
+    
+                return true;
+            
+            else 
+            	return false;
+        }*/
+		return position < currentSize;
+		
+    }
 
 	public Object next() throws NoSuchElementException, 
 				    ConcurrentModificationException, 
@@ -388,16 +400,19 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> extends Abs
 	    //COMPLETEZ
 		
     	//int modif = modifications;
-		if (m != modifications)
+		/*if (m != modifications)
 			throw new ConcurrentModificationException();
-		if (isEmpty())
+	
+		if (isEmpty()) 
 			throw new NoSuchElementException();
+		
 	    if (hasNext()) 
 	    	return array[++position];
-	    else
-	    	throw new UnsupportedOperationException(); 
+	    else 
+	    	throw new UnsupportedOperationException();*/
+	   
 	    
-	    /*if(!hasNext()){
+	    if(!hasNext()){
             throw new NoSuchElementException();
         }
 
@@ -407,7 +422,7 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> extends Abs
 
         else{
             return array[position++];
-        }*/
+        }
     
 	    
 	    /*ArrayList<AnyType> list = new ArrayList<AnyType>(); 
@@ -431,5 +446,5 @@ return iterator;
 	public void remove() {
 	    throw new UnsupportedOperationException();
 	}
-    }
+   }
 }
