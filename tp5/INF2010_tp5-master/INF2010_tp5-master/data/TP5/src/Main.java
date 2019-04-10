@@ -1,3 +1,5 @@
+package tp5;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -93,7 +95,7 @@ public class Main {
 
 		// Partie 3 : Afficher le chemin le plus court
 		System.out.println(d.afficherCourtChemin(A,G));
-		//System.out.println(d.afficherEdgeList());
+		System.out.println(d.afficherEdgeList());
 	
 	}
 }

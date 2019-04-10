@@ -11,7 +11,9 @@ public class Node {
 	private String name;
 	private int longitude;
 	private int altitude;
+	public boolean found;
 
+	
 	private Integer distance = Integer.MAX_VALUE;
 
 	Map<Node, Integer> adjacentNodes = new HashMap<>();
@@ -45,6 +47,13 @@ public class Node {
 	public void addDestination(Node destination, int distance) {
 		adjacentNodes.put(destination, distance);
 	}
+	public Node() {
+		this.id 	= 0;
+		this.name = "0";
+		this.longitude = 0;
+		this.altitude = 0;
+		this.found = false;
+	};
 
 	public Node(String name) {
 		this.name = name;
@@ -63,6 +72,14 @@ public class Node {
 		this.longitude = 0; 
 		this.altitude = 0;
 	}
+        
+        public Node(Node node) {
+    		this.id = node.id;
+    		this.name = node.name;
+    		this.longitude = node.longitude; 
+    		this.altitude = node.altitude;
+    		this.found = node.found;
+        } 
 	
 	
 	public int getId() {

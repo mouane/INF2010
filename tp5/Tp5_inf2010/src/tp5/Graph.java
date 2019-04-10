@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Graph {
 
-	//private List<Node> nodes; // Noeuds
+	private List<Node> nodes; // Noeuds
 	private List<Edge> edges; // Les arcs
 	
 	public Graph() {
@@ -14,6 +14,18 @@ public class Graph {
 		this.edges = this.getEdges();
 
 		this.nodes = this.getNodes();
+	}
+	public Graph(Graph g) {
+		nodes = new ArrayList<Node>();
+		edges = new ArrayList<Edge>();
+		
+		for(int i = 0; i < g.getNodes().size();++i) {
+			nodes.add(new Node(g.getNodes().get(i)));
+		}
+		for(int i = 0; i < g.getEdges().size();++i) {
+			edges.add(new Edge(g.getEdges().get(i)));
+		}
+		
 	}
 	
 	public List<Edge> getEdgesGoingFrom(Node source) {
@@ -38,13 +50,6 @@ public class Graph {
 	
 	// Accesseurs
 	/*
-	public List<Node> getNodes() {
-		return nodes;
-	}
-	public void setNodes(List<Node> nodes) {
-		this.nodes = nodes;
-	}
-	*/
 	public List<Edge> getEdges() {
 		return edges;
 	}
@@ -54,27 +59,29 @@ public class Graph {
 	private Set<Node> nodes = new HashSet<>();
 
 
-
 	public void addNode(Node nodeA) {
-
 		nodes.add(nodeA);
-
 	}
-
-
 
 	public Set<Node> getNodes() {
-
 		return nodes;
-
 	}
 
-
-
 	public void setNodes(Set<Node> nodes) {
-
 		this.nodes = nodes;
-
+	}*/
+	
+	public List<Node> getNodes() {
+		return nodes;
+	}
+	public void setNodes(List<Node> nodes) {
+		this.nodes = nodes;
+	}
+	public List<Edge> getEdges() {
+		return edges;
+	}
+	public void setEdges(List<Edge> edges) {
+		this.edges = edges;
 	}
 
 }
