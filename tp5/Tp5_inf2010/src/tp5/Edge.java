@@ -11,6 +11,7 @@ public class Edge {
 	public Edge(Node s, Node d, int dist) {
 		this.source = s;
 		this.destination = d;
+		this.distance = dist;
 		// A completer
 	}
      
@@ -22,6 +23,11 @@ public class Edge {
                 // https://en.wikipedia.org/wiki/Taxicab_geometry
 
 	}
+         public Edge (Edge edge) {
+        	 this.destination = new Node(edge.destination); 
+        	 this.source = new Node(edge.destination);
+         }
+            
 	
 	public Node getSource() {
 		return source;

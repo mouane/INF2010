@@ -1,6 +1,5 @@
 package tp5;
 
-import java.util.List;
 import java.util.*;
 
 public class Main {
@@ -9,7 +8,7 @@ public class Main {
 		Graph g = new Graph();
 
 		// Partie 1: A completer : Création du graphe
-		/*
+		
 		//Graphe Fig 1
 		Node A = new Node(1, "A");
 		Node B = new Node(2, "B");
@@ -21,8 +20,8 @@ public class Main {
 
 		//Ajout des nodes
 		List<Node> nodeGraph = g.getNodes();
-		g.setNodes(nodeGraph);*/
-
+		g.setNodes(nodeGraph);
+/*
 		Node A = new Node("A");
 		Node B = new Node("B");
 		Node C = new Node("C");
@@ -30,7 +29,7 @@ public class Main {
 		Node E = new Node("E");
 		Node F = new Node("F");
 		Node G = new Node("G");
-
+*/
 		A.addDestination(B,2);
 		A.addDestination(C,1);
 
@@ -87,14 +86,14 @@ public class Main {
 		//FE = new Edge(F,E,1);
 		//FG = new Edge(F,G,2);
 
-		G.addDestination(C,1);
-		G.addDestination(C,2);
+		//G.addDestination(C,1);
+		//G.addDestination(C,2);
 
 		//GD = new Edge(G,D,5);
 		//GF = new Edge(G,F,2);
 
 
-		/*
+		
 		Edge AB, AC,BA,BE,BC,BD,CD,CB,CE,CF,CA,DB,DC,DF,DG,EB,EC,EF,FC,FD,FE,FG,GD,GF;
 
 		AB = new Edge(A,B,2);
@@ -129,8 +128,8 @@ public class Main {
 		GF = new Edge(G,F,2);
 
 		List<Edge> edgeGraph = g.getEdges();
-		g.setEdges(edgeGraph);*/
-
+		g.setEdges(edgeGraph);
+/*
 		g.addNode(A);
 		g.addNode(B);
 		g.addNode(C);
@@ -138,25 +137,23 @@ public class Main {
 		g.addNode(E);
 		g.addNode(F);
 		g.addNode(G);
-
+*/
 
 
 		// Partie 2: A completer : Implémentation de l’algorithme Dijkstra
-
-
 		
 		Dijkstra d = new Dijkstra(g);
-		//Node debut = A;
-		//Node fin = G ;
-		List<Node> shortestPathForNodeAG = Arrays.asList(A,G);
+		d.findPath(A,G);
+		
+		/*List<Node> shortestPathForNodeAG = Arrays.asList(A,G);
 		for(int i =0; i<shortestPathForNodeAG.size();i++){
 			System.out.println(shortestPathForNodeAG.get(i).getShortestPath());
-		}
-		g = d.findPath(A,G,g);
+		}*/
+		
 
-		for(int i =0; i<g.getNodes().size();i++){
+		/*for(int i =0; i<g.getNodes().size();i++){
 			System.out.println(g.getNodes().iterator().next().getName());
-		}
+		}*/
 /*
 		for (Node node : g.getNodes()) {
 			System.out.println(node.getName());
